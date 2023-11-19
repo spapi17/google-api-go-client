@@ -1350,6 +1350,10 @@
             "type": "string"
           },
           "type": "array"
+        },
+        "composer_internal_ipv4_cidr_block": {
+          "description": "",
+          "type": "string"
         }
       },
       "type": "object"

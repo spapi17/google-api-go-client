@@ -1477,6 +1477,8 @@ type NodeConfig struct {
 	// (https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
 	Tags []string `json:"tags,omitempty"`
 
+	ComposerInternalIpv4CidrBlock string `json:"composerInternalIpv4CidrBlock,omitempty"`
+
 	// ForceSendFields is a list of field names (e.g. "DiskSizeGb") to
 	// unconditionally include in API requests. By default, fields with
 	// empty or default values are omitted from API requests. However, any
