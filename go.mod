@@ -1,4 +1,4 @@
-module github.com/spapi17/google-api-go-client
+module google.golang.org/api
 
 go 1.19
 
