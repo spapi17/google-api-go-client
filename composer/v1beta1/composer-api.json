@@ -1705,6 +1705,14 @@
           "description": "Optional. The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.",
           "format": "int32",
           "type": "integer"
+        },
+        "webServerPluginsMode": {
+          "description": "",
+          "enum": [
+            "ENABLED",
+            "DISABLED"
+          ],
+          "type": "string"
         }
       },
       "type": "object"
