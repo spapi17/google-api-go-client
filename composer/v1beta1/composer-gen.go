@@ -2521,6 +2521,42 @@ func (s *WorkerResource) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+type DagProcessorResource struct {
+	Cpu float64 `json:"cpu,omitempty"`
+
+	MemoryGb float64 `json:"memoryGb,omitempty"`
+
+	StorageGb float64 `json:"storageGb,omitempty"`
+
+	ForceSendFields []string `json:"-"`
+
+	NullFields []string `json:"-"`
+}
+
+func (s *DagProcessorResource) MarshalJSON() ([]byte, error) {
+	type NoMethod DagProcessorResource
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+func (s *DagProcessorResource) UnmarshalJSON(data []byte) error {
+	type NoMethod DagProcessorResource
+	var s1 struct {
+		Cpu       gensupport.JSONFloat64 `json:"cpu"`
+		MemoryGb  gensupport.JSONFloat64 `json:"memoryGb"`
+		StorageGb gensupport.JSONFloat64 `json:"storageGb"`
+		*NoMethod
+	}
+	s1.NoMethod = (*NoMethod)(s)
+	if err := json.Unmarshal(data, &s1); err != nil {
+		return err
+	}
+	s.Cpu = float64(s1.Cpu)
+	s.MemoryGb = float64(s1.MemoryGb)
+	s.StorageGb = float64(s1.StorageGb)
+	return nil
+}
+
 // WorkloadsConfig: The Kubernetes workloads configuration for GKE
 // cluster associated with the Cloud Composer environment. Supported for
 // Cloud Composer environments in versions composer-2.*.*-airflow-*.*.*
