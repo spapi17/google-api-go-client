@@ -2115,7 +2115,7 @@ type SoftwareConfig struct {
 	// composer-1.*.*-airflow-2.*.*.
 	SchedulerCount int64 `json:"schedulerCount,omitempty"`
 
-	webServerPluginsMode string `json:"webServerPluginsMode,omitempty"`
+	WebServerPluginsMode string `json:"webServerPluginsMode,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g.
 	// "AirflowConfigOverrides") to unconditionally include in API requests.
