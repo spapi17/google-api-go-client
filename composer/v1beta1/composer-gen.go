@@ -2576,6 +2576,8 @@ type WorkloadsConfig struct {
 	// Worker: Optional. Resources used by Airflow workers.
 	Worker *WorkerResource `json:"worker,omitempty"`
 
+	DagProcessor *DagProcessorResource `json:"worker,omitempty"`
+
 	// ForceSendFields is a list of field names (e.g. "Scheduler") to
 	// unconditionally include in API requests. By default, fields with
 	// empty or default values are omitted from API requests. However, any
