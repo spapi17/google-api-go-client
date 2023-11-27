@@ -1608,6 +1608,14 @@
           "description": "Optional. The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.",
           "format": "int32",
           "type": "integer"
+        },
+        "webServerPluginsMode": {
+            "description": "",
+            "enum": [
+              "ENABLED",
+              "DISABLED"
+            ],
+            "type": "string"
         }
       },
       "type": "object"
@@ -1792,6 +1800,28 @@
       },
       "type": "object"
     },
+    "DagProcessorResource": {
+      "description": "",
+      "id": "DagProcessorResource",
+      "properties": {
+        "cpu": {
+          "description": "",
+          "format": "float",
+          "type": "number"
+        },
+        "memoryGb": {
+          "description": "",
+          "format": "float",
+          "type": "number"
+        },
+        "storageGb": {
+          "description": "Optional. Storage (GB) request and limit for a single Airflow worker replica.",
+          "format": "float",
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
     "WorkloadsConfig": {
       "description": "The Kubernetes workloads configuration for GKE cluster associated with the Cloud Composer environment. Supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.",
       "id": "WorkloadsConfig",
@@ -1810,7 +1840,11 @@
         },
         "worker": {
           "$ref": "WorkerResource",
-          "description": "Optional. Resources used by Airflow workers."
+          "description": "Optional. Resources used by Airflow workers.",
+        },
+        "dagProcessor": {
+          "$ref": "DagProcessorResource",
+          "description": ""
         }
       },
       "type": "object"
