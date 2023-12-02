@@ -708,6 +708,10 @@ type EnvironmentConfig struct {
 	// Cloud Composer environment.
 	PrivateEnvironmentConfig *PrivateEnvironmentConfig `json:"privateEnvironmentConfig,omitempty"`
 
+	EnablePrivateEnvironment bool `json:"EnablePrivateEnvironment,omitempty"`
+
+	EnablePrivateBuildsOnly bool `json:"EnablePrivateBuildsOnly,omitempty"`
+
 	// RecoveryConfig: Optional. The Recovery settings configuration of an
 	// environment. This field is supported for Cloud Composer environments
 	// in versions composer-2.*.*-airflow-*.*.* and newer.

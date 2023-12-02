@@ -1575,6 +1575,12 @@
       },
       "type": "object"
     },
+    "EnablePrivateEnvironment": {
+      "type": "boolean"
+    },
+    "EnablePrivateBuildsOnly": {
+      "type": "boolean"
+    },
     "RecoveryConfig": {
       "description": "The Recovery settings of an environment.",
       "id": "RecoveryConfig",
