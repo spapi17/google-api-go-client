@@ -708,10 +708,6 @@ type EnvironmentConfig struct {
 	// Cloud Composer environment.
 	PrivateEnvironmentConfig *PrivateEnvironmentConfig `json:"privateEnvironmentConfig,omitempty"`
 
-	EnablePrivateEnvironment bool `json:"EnablePrivateEnvironment,omitempty"`
-
-	EnablePrivateBuildsOnly bool `json:"EnablePrivateBuildsOnly,omitempty"`
-
 	// RecoveryConfig: Optional. The Recovery settings configuration of an
 	// environment. This field is supported for Cloud Composer environments
 	// in versions composer-2.*.*-airflow-*.*.* and newer.
@@ -1815,6 +1811,10 @@ type PrivateEnvironmentConfig struct {
 	// the tenant project's App Engine VMs. This field is supported for
 	// Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 	WebServerIpv4ReservedRange string `json:"webServerIpv4ReservedRange,omitempty"`
+
+	EnablePrivateEnvironment bool `json:"EnablePrivateEnvironment,omitempty"`
+
+	EnablePrivateBuildsOnly bool `json:"EnablePrivateBuildsOnly,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g.
 	// "CloudComposerConnectionSubnetwork") to unconditionally include in
