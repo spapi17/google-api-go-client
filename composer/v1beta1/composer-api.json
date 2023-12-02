@@ -1571,15 +1571,12 @@
           "description": "Output only. The IP range reserved for the tenant project's App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.",
           "readOnly": true,
           "type": "string"
+        },
+        "EnablePrivateBuildsOnly": {
+          "type": "boolean"
         }
       },
       "type": "object"
-    },
-    "EnablePrivateEnvironment": {
-      "type": "boolean"
-    },
-    "EnablePrivateBuildsOnly": {
-      "type": "boolean"
     },
     "RecoveryConfig": {
       "description": "The Recovery settings of an environment.",
