@@ -1812,7 +1812,7 @@ type PrivateEnvironmentConfig struct {
 	// Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 	WebServerIpv4ReservedRange string `json:"webServerIpv4ReservedRange,omitempty"`
 
-	EnablePrivateBuildsOnly bool `json:"EnablePrivateBuildsOnly,omitempty"`
+	EnablePrivateBuildsOnly bool `json:"enablePrivateBuildsOnly,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g.
 	// "CloudComposerConnectionSubnetwork") to unconditionally include in

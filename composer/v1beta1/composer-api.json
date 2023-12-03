@@ -1572,7 +1572,7 @@
           "readOnly": true,
           "type": "string"
         },
-        "EnablePrivateBuildsOnly": {
+        "enablePrivateBuildsOnly": {
           "type": "boolean"
         }
       },
